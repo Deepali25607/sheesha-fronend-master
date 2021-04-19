@@ -1,0 +1,28 @@
+.grid {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(min-content, 1fr));
+    grid-gap: 1rem;
+    .grid__row {
+      grid-gap: 0rem;
+    }
+  }
+  &__col4 {
+    grid-column: span 4;
+    @media (max-width: 992px) {
+      grid-column: 1 / -1;
+    }
+  }
+  &__col6 {
+    grid-column: span 6;
+    @media (max-width: 992px) {
+      grid-column: 1 / -1;
+    }
+  }
+  &__col3 {
+    grid-column: span 3;
+  }
+  &__col12 {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin borderRadius($tl: 4px, $tr: 4px, $br: 4px, $bl: 4px) {
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+}
+
+@mixin flexCenter($d: flex, $j: center, $a: center) {
+  display: $d;
+  justify-content: $j;
+  align-items: $a;
+}

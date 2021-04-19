@@ -1,0 +1,23 @@
+@import "../main.scss";
+
+.header {
+  padding: 1rem;
+  background-color: $white;
+  box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.08);
+  &__content {
+    @include flexCenter($j: space-between);
+  }
+  @media (max-width: 495px) {
+    padding:1rem 0;
+    .iconBtn {
+      display: none;
+    }
+    .nav__item {
+      display: none;
+      &:not(:last-child) {
+        
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,17 @@
+@import "../main.scss";
+.nav {
+  &__bar {
+  }
+  &__item {
+    margin: 0 1rem;
+    display: inline-block;
+  }
+  &__link {
+    @include borderRadius();
+    padding: 0.5rem 0.75rem;
+    display: block;
+    &:hover {
+      background-color: lighten($light-blue, 45);
+    }
+  }
+}

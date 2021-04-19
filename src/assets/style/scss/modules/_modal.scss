@@ -1,0 +1,84 @@
+@import "../utilities/_index";
+
+
+.ReactModal__Content {
+  inset: unset !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  width: 850px;
+  max-height: 800px;
+}
+.modal {
+  &__close {
+    &--icon {
+      @include borderRadius(50%, 50%, 50%, 50%);
+      @include flexCenter;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: lighten($light-blue, 45);
+      cursor: pointer;
+      float: right;
+      &:hover {
+        background: lighten($light-blue, 0);
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  &__header {
+  }
+  &__body {
+    padding-top: 2rem;
+    h2 {
+        color: lighten($black, 10);
+      margin: 0;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      li {
+        list-style: disc;
+        margin-bottom: 0.5rem;
+        color: lighten($black, 30);
+        &::marker {
+          color: $black;
+        }
+      }
+    }
+    .iconBtn {
+      @include flexCenter;
+      background: $dark-blue;
+      box-shadow: 0px 14px 23px #21399340;
+      margin: 0 auto;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+      &:hover {
+        background: lighten($dark-blue, 10);
+        box-shadow: 0px 14px 23px #213a936e;
+      }
+    }
+  }
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(min-content, 1fr));
+    gap: 1rem;
+    &__col12 {
+      grid-column: 1 / -1;
+    }
+    .grid__col6 {
+      grid-column: span 6;
+    }
+  }
+}

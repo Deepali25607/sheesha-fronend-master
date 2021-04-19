@@ -1,0 +1,216 @@
+@import "../utilities/_index";
+
+.ethereum__card {
+  .shapeCard {
+    &__content {
+      h3 {
+        margin-top: 0.5rem;
+        font-weight: 300;
+        font-size: 2rem;
+        color: #3c3c3b;
+        @media (max-width: 992px) {
+          margin: 0;
+          font-size: 1.5rem;
+        }
+      }
+      img {
+        @media (max-width: 992px) {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+.binance__card {
+  .shapeCard {
+    &__content {
+      text-transform: uppercase;
+      color: $yellow;
+      h3 {
+        margin: 0;
+        font-weight: 800;
+        font-size: 2.5rem;
+        @media (max-width: 992px) {
+          margin: 0;
+          font-size: 1.5rem;
+        }
+      }
+      h4 {
+        margin: 0;
+        font-size: 1.6rem;
+        white-space: pre;
+        @media (max-width: 992px) {
+          margin: 0;
+          font-size: 1rem;
+        }
+      }
+      img {
+        @media (max-width: 992px) {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+.shapeCard {
+  margin: 0 auto;
+  max-width: 360px;
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &:hover {
+    svg {
+      path {
+        fill: lighten($light-blue, 45);
+      }
+    }
+  }
+  &__shape {
+    svg {
+      width: 100%;
+      height: 100%;
+      @media (max-width: 992px) {
+        width: 175px;
+      }
+      path {
+      }
+    }
+  }
+}
+.sheesha__card {
+  max-width: 100% !important;
+  @media (max-width: 992px) {
+    width: 180px;
+  }
+}
+.dataList_card {
+  @include borderRadius(10px, 10px, 10px, 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  min-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.034);
+  @media (max-width: 495px) {
+    min-width: 100%;
+  }
+  &--body {
+    padding: 2rem;
+
+    h1 {
+      text-align: center;
+      font-weight: normal;
+      font-size: 2.5rem;
+      color: $light-blue;
+    }
+  }
+}
+
+.aboutUsCard {
+  @include borderRadius(15px, 15px, 15px, 15px);
+  background-color: $white;
+  padding: 2rem 3rem;
+  width: 746px;
+  @media (max-width: 1600px) {
+    width: 100%;
+    padding: 2rem;
+  }
+  @media (max-width: 992px) {
+    padding: 2rem 1.5rem;
+  }
+
+  &--title {
+    font-size: 2.5rem;
+    color: $dark-blue;
+    margin-top: 0rem;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+  &__deatils {
+    &--list {
+      margin-bottom: 1rem;
+      display: flex;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      span {
+        color: #6f727a;
+        margin-top: 0.2rem;
+        &:nth-child(2) {
+          margin-top: 0;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.serviceCard {
+  @include flexCenter;
+  background-color: $white;
+  box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.06);
+  width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+  @media (max-width: 1215px) {
+    width: 100%;
+    &--icon {
+      width: 75px;
+    }
+  }
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+  &--body {
+    padding: 5rem 2rem;
+    text-align: center;
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+    }
+  }
+  &--title {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #222a41;
+  }
+  &--text {
+    color: #6f727a;
+  }
+}
+.contactCard {
+  @include borderRadius(10px, 10px, 10px, 10px);
+  background-color: #1ec186;
+  padding: 2rem;
+  color: $white;
+  p {
+    a {
+      color: $white;
+    }
+  }
+  &--icon {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+.contactFormCard {
+  @include borderRadius(20px, 20px, 20px, 20px);
+  padding: 2.5rem;
+  box-shadow: 0px 10px 30px rgba(209, 213, 223, 0.5);
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    color: #232323;
+  }
+}
